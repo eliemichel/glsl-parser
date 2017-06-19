@@ -28,7 +28,7 @@ struct vector {
     const T& operator[](size_t index) const { return m_data[index]; }
     T& operator[](size_t index) { return m_data[index]; }
     T* begin() { return &m_data[0]; }
-    T* end() { return &m_data[size()]; }
+    T* end() { return (&m_data[0]) + size(); }
     const T* begin() const { return &m_data[0]; }
     const T* end() const { return &m_data[size()]; }
     void insert(T *at, const T& value = T()) { m_data.insert(m_data.begin() + size_t(at - begin()), value); }

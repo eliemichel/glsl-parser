@@ -33,8 +33,8 @@ struct astNode {
         return data;
     }
 private:
-    void *operator new(size_t);
-    void operator delete(void *);
+    //void *operator new(size_t);
+    //void operator delete(void *);
 };
 
 
